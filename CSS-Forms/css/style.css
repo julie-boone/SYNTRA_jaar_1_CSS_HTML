@@ -1,0 +1,168 @@
+
+
+header 
+{
+    background-color: orangered;
+}
+
+header h1 
+{
+    text-align: center; /*hier kan je text-align gebruiken omdat het een block-based element is*/
+    text-transform: uppercase;
+    color:whitesmoke;
+    padding: 1.5rem;
+}
+
+main#grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#grid .tile a 
+{
+    display:flex; /*zorgen dat link op het hele blok werkt*/
+    justify-content:center; /* werkt alleen als display flex is */
+    align-items: center;
+    min-height: 20vh; /* viewport-height: percentage van het scherm, dus 100vh is de volledige hoogte van het scherm (niet van browservenster)*/
+   
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    border: 1px solid orangered;
+    background-color: orange;
+
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3); /*box-shadow ligt achter je box model, dus verschuift niets zoals een border wel zou doen */
+    transition: box-shadow 300ms ease-in-out; /*als er meerdere dingen tegelijk moeten gebeuren, kan je transition: all gebruiken*/
+}
+
+#grid .tile a:hover
+{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*LOGIN FORM 1*/
+
+#back p
+{
+    text-align: right;
+    padding: 1rem;
+}
+
+#back p a
+{
+    text-decoration: none;
+    color: orangered;
+    text-transform: uppercase;
+}
+
+main
+{
+    padding: 2rem;
+
+}
+
+#login-form
+{
+    max-width: 350px;
+    font-size: 22px;
+    border: 1px solid orangered;
+    margin: 1rem auto; /*om te centreren*/
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#login1 .form-group,
+#login3 .form-group
+{
+    display: flex;
+    flex-direction: column; /*deze twee samen zorgen ervoor dat alle elementen onder elkaar komen, en de volledige breedte innemen*/
+    margin: 0.5rem 0;
+}
+
+#login1 .form-group label,
+#login3 .form-group label
+{
+    color: orangered;
+    font-weight: bolder;
+}
+
+#login1 .form-group input,
+#login3 .form-group input
+{
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem; 
+}
+
+#login1 .form-group input[type="submit"], /*speciale selector, zorgt ervoor dat je geen klasse moet toevoegen*/
+#login3 .form-group input[type="submit"] 
+{
+    margin: 1rem 0;
+    padding: 0.5rem; /*overrulet de vorige instructies voor padding*/
+    background-color: orangered;
+    color: whitesmoke;
+    text-transform: uppercase;
+    border: orangered;
+}
+
+
+/*LOGIN FORM 3*/
+
+#login3
+{
+    max-width: 400px;
+    margin: 1rem auto;
+    border: 3px solid orangered;
+    border-radius: 1rem;
+}
+
+#login3 .logo
+{
+    margin: 2rem;
+    border-bottom: 3px dotted orangered;
+    padding-bottom: 3rem;
+}
+
+#login3 .logo img
+{
+    max-width: 200px;
+    height: auto; /*niet vergeten, want niet elke browser schaalt automatisch*/
+    margin: 0 auto; /* om te centreren*/
+    border-radius: 0.5rem;
+}
+
+#login3 form
+{
+    padding: 1rem 2rem;
+}
+
+#login3 form .form-group a
+{
+    text-align: center;
+    color: orangered;
+    text-decoration: none;
+}
+
+
+/* 
+@media (min-width: 1440px)
+{
+    #login3 
+    {
+        max-width: 400px;
+    }
+} 
+
+meet de breedte van je scherm en reageert daarop
+door dat we min-width gebruiken, is dit ontwerp mobile-first
+*/
+
+
+/* LOGIN FORM 3*/
+/*zie code Thomas*/

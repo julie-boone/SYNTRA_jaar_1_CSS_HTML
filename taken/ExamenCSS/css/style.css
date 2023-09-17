@@ -1,0 +1,284 @@
+/*
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Montserrat:wght@300;400&family=Sansita&display=swap');
+
+:root 
+{
+    --main_col: #fde79d;
+    --sec_col: #012260;
+    --bg_col1: #e3b009;
+    --bg_col2: #fffcf4;
+    --sh_col: #604a02;
+}
+
+
+
+body
+{
+    background-color: var(--bg_col2);
+}
+
+/*HEADER*/
+
+header
+
+{
+    display: inline-block;
+    background-color: var(--bg_col1);
+    width: 100%;
+    position: relative;
+    max-height: 4rem;
+    align-content: center;
+}
+
+header .logo img
+{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    padding: 0;
+    transition: all 300ms ease-in-out;
+}
+
+header .logo img:hover
+{
+    padding: 0.2rem;
+    border-radius: 15px;
+}
+
+header nav
+{
+    width: 100%;
+    text-align: right;
+    height: 100%;   
+    padding-right: 1rem; 
+}
+
+header nav ul li
+{
+    display: inline;
+}
+
+header nav ul li a
+{   
+    background-color: var(--main_col);
+    box-shadow: 2px 2px 2px var(--sh_col);
+    padding: 0.8rem;
+    height: 100%;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none; 
+    font-weight: 600;
+    color: var(--sec_col);
+    transition: all 300ms ease-in-out;
+}
+
+header nav ul li a.current_tab
+{
+    box-shadow: 3px 3px var(--sh_col);
+    text-decoration-line: underline;
+}
+
+header nav ul li:hover a
+{
+    box-shadow: 3px 3px var(--sh_col);
+    text-decoration-line: underline;
+}
+
+/*MAIN*/
+
+.grid
+{
+    display: grid;
+}
+
+.grid-col2
+{
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    
+}
+
+main
+{
+    min-width: 70%;
+    padding: 2rem 5% 10rem 5%;
+}
+
+main .title
+{
+    margin: 1.5rem 0;
+    transition: all 300ms ease-in-out;
+    color: var(--sec_col);
+    word-spacing: 5rem;
+    font-size: 2rem;
+}
+
+main .title:hover
+{
+    word-spacing: 0;
+}
+
+main p 
+{
+    padding: 0.8rem 0;
+    text-align: justify;
+}
+
+main .inleiding
+{
+    font-style: italic;
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+}
+
+.center-div
+{
+    margin: 0 auto;
+}
+
+.center-text
+{
+    text-align: center;
+}
+
+
+
+/*NIEUWS*/
+
+main #nws-block article
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 2px solid var(--sec_col);
+    border-radius: 10px;
+    gap: 1rem;
+    background-color: #0122601a;
+}
+
+
+
+main #nws-block article a
+{
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    background-color: #012260ba;
+    color: var(--bg_col2);
+    transition: all 300ms ease-in-out;
+    margin: 0 auto;
+    margin-top: auto;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+main #nws-block article a:hover
+{
+background-color: var(--sec_col);
+}
+
+
+/*DIENSTEN*/
+
+main article.geel
+{
+    background-color: #012260bc;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    margin: 0.5rem 0;
+    color: var(--bg_col2);
+    text-shadow: 2px 2px var(--sec_col);
+}
+
+main article.blauw
+{
+    background-color: #e3b009c9;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    margin: 0.5rem 0;
+    color: var(--bg_col2);
+    text-shadow: 2px 2px var(--bg_col1);
+}
+
+main #diensten-uitgelicht
+{
+    margin: 2rem 10rem ;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    background-color: var(--bg_col1);
+    color: var(--bg_col2);
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+/*FORMULIER*/
+
+main form
+{
+    background-color: var(--main_col);
+    padding: 1rem;
+    margin: 0 1rem;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px var(--sec_col);
+    width: min-content;
+    line-height: 2rem;
+}
+
+main form .form-group label
+{
+    display: block;
+    color: var(--sec_col);
+    font-weight: 500;
+}
+
+main form .form-group input, 
+main form .message textarea
+{
+    min-width: 250px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1.5px solid var(--sec_col);
+}
+
+main form .form-group input:focus, 
+main form .message textarea:focus
+{
+    border: 2px solid var(--sec_col);
+}
+
+main form input[type="submit"]
+{
+    color: var(--bg_col2);
+    font-weight: 500;
+    background-color: var(--bg_col1);
+    border: var(--bg_col1);
+}
+
+/*FOOTER*/
+
+footer
+{
+    background-color: var(--sec_col);
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1.3rem;
+}
+
+footer p
+{
+    text-align: center;
+    color: var(--bg_col2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+}
+
+

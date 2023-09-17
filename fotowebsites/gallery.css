@@ -1,0 +1,59 @@
+body 
+{
+    font-size: 20px;
+    padding: 1rem;
+}
+
+main 
+{
+    max-width: 1200px; /*niet gewoon width, anders niet responsief */
+    margin: 0 auto; /*om te centreren, onder-boven geen margin, links-rechts automatisch*/
+}
+
+main section#gal01 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem; /*wordt verdubbeld, want komt rond élke kolom*/
+}
+
+#gal01 figure
+{
+    margin: 1rem 0;
+    /*border: 1px solid black;*/
+    position: relative; /*staat er eigenlijk altijd, maar impliciet. als we het expliciet maken, zorgt dat ervoor 
+                            dat het child element dit element neemt om zich tov te positioneren*/
+    padding: 1rem;
+    background-color: rgb(230, 230, 230);
+    }
+
+#gal01 figure img
+{
+    filter: grayscale();
+    transition: all 300ms ease-in-out;
+}
+
+#gal01 figure:hover img,
+#gal01 figure:focus img
+{
+    filter: none;
+}
+
+#gal01 figure figcaption
+{
+    position: absolute; /*absoluut tov de ouder, dus de figure*/
+    left: 1rem; /*gelijk met de linkerkant van de ouder (rekening houdend met padding van ouder)*/
+    right: 1rem; /*gelijk met de rechterkant van de ouder, dus nu de volledige breedte van de ouder*/
+    /*als je hier width gebruikt ipv left en right, kan je dat veel moeilijker uitlijnen met de padding van de ouder*/
+    bottom: 0;
+    background-color: rgba(230, 230, 230, 0.8);
+    z-index: 100;
+    padding: 2rem 1rem;
+    opacity: 0; /*standaard 0% zichtbaar, pas tonen als muis erover gaat*/
+    transition: all 300ms ease-in-out;/*transition zet je op hoofdelement, niet op element dat erin transitioneert*/
+}
+
+#gal01 figure:hover figcaption /*geen JS voor nodig!*/
+{
+opacity: 1; /*100% zichtbaar*/
+}

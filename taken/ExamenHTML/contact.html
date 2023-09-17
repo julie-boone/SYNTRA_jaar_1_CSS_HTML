@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/syntra_core.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="grid grid-col2__left">
+        <section id="logo" class="column">
+            <p>
+                <img src="img/ChiefMouserLogo.jpg" alt="">
+            </p>
+        </section>
+        <nav class="nav-main column">
+            <a href="index.html" class="nav-link">
+                Chief Mouser
+            </a>
+            <a href="henry.html" class="nav-link">
+                Henry VIII
+            </a>
+            <a href="historiek.html" class="nav-link">
+                Historiek
+            </a>
+            <a href="woordenboek.html" class="nav-link">
+                Woordenboek
+            </a>
+            <a href="galerij.html" class="nav-link">
+                Galerij
+            </a>
+            <a href="contact.html" class="nav-link nav-link__current">
+                Contact
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>
+                Contact
+            </h1>
+        </section>
+        <section id="contact">
+         <!-- zit allemaal diep genest, maar dat is de enige manier waarop ik verschillende veldjes naast elkaar kreeg-->
+            <form action="" method="post">
+                <section class="formgroup">
+                    <div class="grid grid-col2">
+                        <div>
+                            <label for="naam">
+                                Naam
+                            </label>
+                            <br>
+                            <input id="naam" type="text">
+                        </div>
+                        <div>
+                            <label for="voornaam">
+                                Voornaam
+                            </label>
+                            <br>
+                            <input id="voornaam" type="text">
+                        </div>
+                    </div>
+                </section>
+                <section class="formgroup">
+                    <div class="grid grid-col3">
+                        <div>
+                            <label for="straat">
+                                Straat en nummer
+                            </label>
+                            <br>
+                            <input id="straat" type="text">
+                        </div>
+                        <div>
+                            <label for="postcode">
+                                Postcode en stad
+                            </label>
+                            <input id="postcode" type="text">
+                        </div>
+                        <div>
+                            <label for="email">
+                                E-mailadres
+                            </label>
+                            <input id="email" type="email">
+                        </div>
+                    </div>
+                </section>
+                <section class="formgroup">
+                    <label for="bericht">
+                        Uw bericht
+                    </label>
+                    <textarea name="bericht" id="bericht" cols="50" rows="5"></textarea>
+                </section>
+                <section class="formgroup">
+                    <input type="submit" value="Contact opnemen">
+                </section>
+            </form>
+
+        </section>
+
+    </main>
+    <footer class="grid grid-col2">
+        <p>
+            Syntra Midden-Vlaanderen (c)2023
+        </p>
+        <p>
+            Eindwerk module HTML
+            <br>
+            Opleiding front end developer 1
+        </p>
+    </footer>
+</body>
+
+</html>
